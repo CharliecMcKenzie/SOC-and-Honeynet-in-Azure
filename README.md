@@ -25,25 +25,30 @@ For the 'AFTER' metrics, I applied security hardening measures by configuring th
 
 ### Before Hardening Security
 
-After just over 24 hours, these are the results gathered from the insecure environment. 
+<p align="center">
+<img src="https://i.imgur.com/TOXzreT.png" height="80%" width="80%" alt="attackmaps"/>
+<img src="https://i.imgur.com/6ueEq1o.png" height="80%" width="80%" alt="attackmaps"/>
+<img src="https://i.imgur.com/vltItQO.png" height="80%" width="80%" alt="attackmaps"/>
+
+After 24 hours, these are the results gathered from the insecure environment. 
 | Metric                   | Count
 | ------------------------ | -----
-| SecurityEvent            | 
-| Syslog                   | 
-| SecurityAlert            | 
-| SecurityIncident         | 
-| AzureNetworkAnalytics_CL | 
+| SecurityEvent            | 54800
+| Syslog                   | 1561
+| SecurityAlert            | 142
+| SecurityIncident         | 24
+| AzureNetworkAnalytics_CL | 1698
 
 ### After Hardening Security
 
 Results after implementing security hardening measures for 24 hours.
 | Metric                   | Count
 | ------------------------ | -----
-| SecurityEvent            | 
-| Syslog                   | 
-| SecurityAlert            | 
-| SecurityIncident         | 
-| AzureNetworkAnalytics_CL | 
+| SecurityEvent            | 7800
+| Syslog                   | 25
+| SecurityAlert            | 0
+| SecurityIncident         | 0
+| AzureNetworkAnalytics_CL | 0
 
 ## Summary
 In this project, a mini honeynet was created in Microsoft Azure, with log sources integrated into a Log Analytics workspace. Microsoft Sentinel was used to generate alerts and create incidents based on the ingested logs. Security metrics were measured in the insecure environment both before and after the application of security controls. The results clearly demonstrated the effectiveness of these measures, as the number of security events and incidents significantly decreased following the implementation of the controls. 
